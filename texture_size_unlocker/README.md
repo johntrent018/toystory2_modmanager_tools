@@ -17,4 +17,4 @@ As this application requires CustomTkinter for the interface's style, make sure 
 
 ### How to build the executable
 
-Run the command `pyinstaller --onefile --windowed --name "Toy Story 2 - Texture Size Unlocker" --icon "ts2.ico" --add-data "ts2.ico;ts2.ico" --collect-all customtkinter main.py` in your terminal.
+Run the command `pyinstaller --onefile --windowed --name "Toy Story 2 - Texture Size Unlocker" --icon "ts2.ico" --add-data "ts2.ico;." --collect-all customtkinter main.py` in your terminal.

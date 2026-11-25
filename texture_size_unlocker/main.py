@@ -1,4 +1,6 @@
 import os
+import sys
+from pathlib import Path
 import customtkinter as ctk
 from tkinter import filedialog, messagebox
 
@@ -21,12 +23,9 @@ class ToyStory2Patcher(ctk.CTk):
         self.geometry("550x320")
         self.resizable(False, False)
         
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        icon_path = os.path.join(script_dir, "ts2.ico")
-        
-        if os.path.exists(icon_path):
-            self.iconbitmap(icon_path)
-        # ------------------------
+        BASE_DIR = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent))
+        ICON_PATH = BASE_DIR / "ts2.ico"
+        self.iconbitmap(str(ICON_PATH))
 
         self.exe_path = ""
         self.lock_switch = (
